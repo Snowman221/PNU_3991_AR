@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Resume/CV Design</title>
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<link type="text/css" rel="stylesheet" href="styles.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".full_info_wrap .tabs ul li").click(function(){
+				$(".full_info_wrap .tabs ul li").removeClass("active");
+				$(this).addClass("active");
+
+				var datali = $(this).attr("data-li");
+
+				$(".full_info_item").hide();
+
+				if(datali == "experience"){
+					$(".experience").show();
+				}
+				else if(datali == "education"){
+					$(".education").show();
+				}
+				else if(datali == "contact"){
+					$(".contact").show();
+				}
+				else{
+					console.log("Laoding...");
+				}
+			})
+		})
+	</script>
+</head>
+<body>
+
+<div class="wrapper">
+   <div class="resume">
+
+       <div class="profile_info">
+            <div class="profile_img">
+              <img src="photo.jpg" alt="profile_img">
+            </div>
+            <div class="profile_data">
+              <p class="name">Shayan Mashoof</p>
+              <span>ایران، تهران<i style="margin-left: 5px" class="fas fa-map-marker-alt"></i></span>
+            </div>
+            <div class="view_more_btn"> </div>
+        </div>
+
+       <div class="skills">
+	       <div class="title" style=" direction: rtl; text-align: left"> Skills</div>
+	       <ul>
+	         <li>
+	           <div class="skill_item html">
+<div class="text"> C &amp; C#</div>
+	           </div>
+	         </li>
+	         <li>
+	           <div class="skill_item css">
+<div class="text"> Microsoft</div>
+	           </div>
+	         </li>
+	         <li>
+	           <div class="skill_item js">
+<div class="text"> Cisco</div>
+	           </div>
+	         </li>
+	       </ul>
+	    </div>
+
+        <div class="full_info_wrap">
+            <div class="tabs">
+                <ul dir="rtl">
+                    <li data-li="experience" class="active">Resume</li>
+                    
+                    <li data-li="contact">Contact</li>
+                </ul>
+            </div>
+
+            <div class="full_info">
+                <div class="full_info_item experience" style=" direction: rtl; text-align: right">
+                    <div class="title">
+                      <p> نام:شایان مشعوف</p>
+                      <p>&nbsp;</p>
+                      <p>دانشجوی مهندسی کامپیوتر پیام نور تهران شمال</p>
+                      <p>&nbsp;</p>
+                      <p>مسلط بر زبان های C و #C</p>
+                      <p>&nbsp;</p>
+                      <p>مسلط بر زبان انگلیسی</p>
+                      <p>&nbsp;</p>
+                      <p>محقق در زمینه امنیت شبکه های کامپیوتری </p>
+                    </div>
+</div>
+                <div class="full_info_item education" style="display: none; direction: rtl; text-align: right">
+                  <div class="title">تحصیلات</div>
+
+                  <div class="info_wrap">
+                    	<ul>
+                    		<li>
+                    			<div class="sub_title">
+                    				1397-...
+                    			</div>
+
+								<div class="info_item">
+									<div class="info_title">
+										دانشجوی کارشناسی
+									</div>
+									<div class="data">
+										در دانشگاهی واقع در استان تهران تحصیل می کنم
+									</div>
+								</div>
+                    		</li>
+                    		<li>
+                    			<div class="sub_title">
+                    				1397-1386
+                    			</div>
+
+								<div class="info_item">
+									<div class="info_title">
+									دوازده سال تحصیل در مدرسه
+									</div>
+									<div class="data">
+
+									</div>
+								</div>
+                    		</li>
+                    	</ul>
+                    </div>
+                </div>
+                <div class="full_info_item contact" style="display: none; direction: rtl; text-align: right">
+                  <div class="title">Contact</div>
+                  <div class="info_wrap">
+                  	<ul>
+                  		<li>
+                  			<span class="info_q">Email</span>
+                  			<span class="info_a">sncrack234@gmail.com</span>
+                  		</li>
+                  	</ul>
+                  </div>
+                </div>
+            </div>
+        </div>
+   </div>
+</div>
+
+</body>
+</html>
